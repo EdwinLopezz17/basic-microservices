@@ -1,0 +1,18 @@
+server:
+  port: 9080
+
+spring:
+  application:
+    name: msvc-product
+  config:
+    import: optional:configserver:http://localhost:8888
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/productsdb
+    username: root
+    password: P4ssword
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQLDialect
